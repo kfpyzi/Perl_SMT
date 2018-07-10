@@ -65,4 +65,4 @@ sub maxk{
         #print Dumper (%hash);
         #print($con);
         return reduce {  ($con * $hash{$key}->{$a}) > ($con * $hash{$key}->{$b})  ? $a : $b } keys %{$hash{$key}};
-    }
+}
