@@ -1,0 +1,1 @@
+#Corpus of English and Japanese Bilingual Text from the internet.
