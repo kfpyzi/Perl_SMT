@@ -53,3 +53,16 @@ sub main{
     
     return 0;    
 }
+
+sub maxk{
+        my $con = $_[0];
+        my $key = $_[1];
+        my $key2 = $_[2];
+        my %hash = %{$_[3]};
+
+        return " " unless exists $hash{$key};
+        #print("~");
+        #print Dumper (%hash);
+        #print($con);
+        return reduce {  ($con * $hash{$key}->{$a}) > ($con * $hash{$key}->{$b})  ? $a : $b } keys %{$hash{$key}};
+    }
